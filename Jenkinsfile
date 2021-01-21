@@ -38,8 +38,19 @@ pipeline {
     }
 
     stage('Deploy Production') {
-      steps {
-        echo 'Deploying in Production Area'
+      parallel {
+        stage('Deploy Production') {
+          steps {
+            echo 'Deploying in Production Area'
+          }
+        }
+
+        stage('notify ') {
+          steps {
+            echo 'done'
+          }
+        }
+
       }
     }
 
