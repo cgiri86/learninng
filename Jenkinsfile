@@ -16,6 +16,12 @@ pipeline {
           }
         }
 
+        stage('code quality') {
+          steps {
+            mail(subject: 'completed', body: 'devenv', from: 'gc00479676@techmahindra.com', replyTo: 'gc00479676@TECHMAHINDRA.COM', to: 'gc00479676@techmahindra.com')
+          }
+        }
+
       }
     }
 
